@@ -41,8 +41,7 @@ Are you ready to outsmart your opponent and claim victory? 🚀
 - **🎮 Interactive Gameplay**: Players ask each other indirect questions to figure out their locations.
 - **📱 Fully Responsive Design**: Looks great on screens of all sizes.
 - **🌟 Accessible Modals**: Easy navigation through game instructions and player modals.
-- **🎨 Clean and Modern UI**: Designed following contemporary best practices.
 - **📊 Scoring System**: Tracks each player's progress.
 
 ## 🚀 Demo
-Check out the game: [Spy Duo Live Demo](#)
+Check out the game: [Spy Duo Live Demo](https://antoshkaff.github.io/spy-duo/)
