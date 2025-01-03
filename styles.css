@@ -50,7 +50,7 @@ button, .no-select {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: linear-gradient(
             #575AFF 0%,
@@ -60,7 +60,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-inline: 20px;
+    padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 
 .about-game {
@@ -194,7 +195,7 @@ section {
     translate: -50% -50%;
     background: #ffffff;
     width: clamp(100px, 84.15vw, 500px);
-    height: 90vh;
+    height: 80vh;
     box-shadow: var(--shadow);
     padding: 30px 30px;
     border-radius: 5px;
@@ -271,6 +272,7 @@ section {
         display: block;
     }
 }
+
 @media (hover: none) {
     .about-game:active {
         color: #cccccc;
@@ -292,6 +294,10 @@ section {
         box-shadow: 0 0 20px #95ff61;
     }
     .card.choose-mode-hover:active::after {
+        display: block;
+    }
+
+    .card.show::after {
         display: block;
     }
 }

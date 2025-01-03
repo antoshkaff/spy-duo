@@ -27,6 +27,8 @@ let firstPlayerScore = 0;
 let secondPlayerScore = 0;
 let isChooseActive = false;
 
+const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
 function activateChoose(chooseStatus) {
     isChooseActive = true;
     if (chooseStatus) {
@@ -40,6 +42,10 @@ function activateChoose(chooseStatus) {
         isSecondPlayerButtonClicked = false;
         whoWinTitle.style.display = 'inline';
 
+        if(isTouchDevice){
+            firstPlayerButton.classList.add('show');
+            secondPlayerButton.classList.add('show');
+        }
     } else {
         cardsNoHover(true)
         cardsDefaultHover(false);
@@ -48,6 +54,11 @@ function activateChoose(chooseStatus) {
 
         startGameButton.classList.remove('disabled');
         whoWinTitle.style.display = 'none';
+
+        if(isTouchDevice){
+            firstPlayerButton.classList.remove('show');
+            secondPlayerButton.classList.remove('show');
+        }
     }
 }
 
@@ -140,6 +151,7 @@ function hideUI(status) {
 }
 
 aboutGameButton.addEventListener('click', () => {
+    hideUI(true);
     aboutGameInfo.classList.add('active');
     aboutGameInfo.style.opacity = '1';
 });
@@ -244,6 +256,7 @@ mainElement.addEventListener('click', (event) => {
         !aboutGameButton.contains(event.target);
 
     if (isClickOutsideModals) {
+        hideUI(false);
         if (firstPlayerModal.classList.contains('active')) {
             firstPlayerModal.classList.remove('active');
             firstPlayerModal.style.opacity = '0';
