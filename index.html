@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spy Duo</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<main>
+  <section>
+    <button class="about-game">
+      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z" fill="currentColor"/></svg>
+    </button>
+    <div class="game-container">
+      <h2 class="who-win-title">Who Won?</h2>
+      <div class="cards-container">
+        <div class="card-wrapper">
+          <button class="card no-hover no-select disabled" id="first-player">
+            <span>№1 <br> PLAYER</span>
+            <span class="player-word first-player-word"> </span>
+          </button>
+          <p class="first-player-score player-score"></p>
+        </div>
+        <div class="card-wrapper">
+          <button class="card no-hover no-select disabled" id="second-player">
+            <span>№2 <br> PLAYER</span>
+            <span class="player-word second-player-word"> </span>
+          </button>
+          <p class="second-player-score player-score"></p>
+        </div>
+      </div>
+      <button class="start-game-button button" type="button">
+        START GAME
+      </button>
+    </div>
+    <div class="first-player card-view">
+      <p> </p>
+      <button class="hide-button button">
+        HIDE CARD
+      </button>
+    </div>
+    <div class="second-player card-view">
+      <p> </p>
+      <button class="hide-button button">
+        HIDE CARD
+      </button>
+    </div>
+    <div class="about-game-info">
+      <h2>Description of the Game "Spy Duo"</h2>
+      <div class="about-game-description">
+        <p>This game is an adaptation of the classic "Spy" game for two players. The main goal is to figure out if their locations match by asking indirect questions.</p>
+        <h3>Rules</h3>
+        <ol>
+          <li>
+            <h4>Start of the Game:</h4>
+            <p>Each player gets one of two random locations, for example:</p>
+            <ul>
+              <li>Player 1: "Subway"</li>
+              <li>Player 2: "Hospital"</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Objective:</h4>
+            <p>Determine if the locations match by asking questions.</p>
+          </li>
+          <li>
+            <h4>Game Flow:</h4>
+            <p>Players take turns asking each other questions. Questions must be indirect, such as:</p>
+            <ul>
+              <li>"How often do you visit this place?"</li>
+              <li>"What do you like about this place?"</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Direct Question:</h4>
+            <p>Each player can ask only one direct question during the game. For example:</p>
+            <ul>
+              <li>
+                <p>Player 1: "Is it a hospital?"</p>
+                <p>If the answer is yes, Player 1 wins.</p>
+              </li>
+              <li>
+                <p>Player 1: "Is it a subway?"</p>
+                <p>If the answer is no, Player 1 loses.</p>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <h3>Victory</h3>
+        <p>The game ends when one of the players correctly identifies whether the locations match or do not match, or when one of the players successfully guesses the exact location using their one direct question.</p>
+      </div>
+      <button class="hide-button button about-game-button">
+        GOT IT
+      </button>
+    </div>
+  </section>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
